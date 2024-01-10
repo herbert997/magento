@@ -1,0 +1,12 @@
+
+type Query {
+    
+    products (
+            uery: String @doc(description: "Query by uery.")
+    ) : Products @resolver( class: "Hrs\\Tecnologia\\Model\\Resolver\\Products") @doc(description: "Query by Query.") 
+}
+
+type Products {
+    
+    id  : String  @doc(description: "Query by id.") 
+}

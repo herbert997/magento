@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Hrs\Tecnologia\Api\HrsManagementInterface" type="Hrs\Tecnologia\Model\HrsManagement"/>
+	<type name="Magento\Company\Model\Company\DataProvider">
+		<plugin name="Hrs_Tecnologia_Plugin_Magento_Company_Model_Company_DataProvider" type="Hrs\Tecnologia\Plugin\Magento\Company\Model\Company\DataProvider" sortOrder="10" disabled="false"/>
+	</type>
+	<type name="Magento\Company\Controller\Adminhtml\Index\Save">
+		<plugin name="Hrs_Tecnologia_Plugin_Magento_Company_Controller_Adminhtml_Index_Save" type="Hrs\Tecnologia\Plugin\Magento\Company\Controller\Adminhtml\Index\Save" sortOrder="10" disabled="false"/>
+	</type>
+	<type name="Magento\Company\Api\CompanyRepositoryInterface">
+		<plugin name="Hrs_Tecnologia_Plugin_Magento_Company_Api_CompanyRepositoryInterface" type="Hrs\Tecnologia\Plugin\Magento\Company\Api\CompanyRepositoryInterface" sortOrder="10" disabled="false"/>
+	</type>
+	<preference for="Hrs\Tecnologia\Api\HrsRepositoryInterface" type="Hrs\Tecnologia\Model\HrsRepository"/>
+	<preference for="Hrs\Tecnologia\Api\Data\HrsInterface" type="Hrs\Tecnologia\Model\Hrs"/>
+	<preference for="Hrs\Tecnologia\Api\Data\HrsSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<type name="hrs">
+		<plugin name="Hrs_Tecnologia_Plugin_Hrs" type="Hrs\Tecnologia\Plugin\Hrs" sortOrder="10" disabled="false"/>
+	</type>
+</config>
